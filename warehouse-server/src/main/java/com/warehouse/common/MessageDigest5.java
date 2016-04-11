@@ -1,18 +1,3 @@
-/**
- * @ (#) MessageDigest5.java
- * Project     : SPAN Self Lending Service
- * File        : MessageDigest5.java
- * Author      : Namdev Shenoy K
- * Company     : Span Systems
- * Date Created: 06/June/2014
- *
- * ========================================================================================================================
- *  No | Modified date |      Modfied by     |  Reason
- * ========================================================================================================================
- *  1.   06/July/2014      Namdev Shenoy K     Added missing Comments
- * ========================================================================================================================
- */
-
 package com.warehouse.common;
 
 import java.io.UnsupportedEncodingException;
