@@ -1,18 +1,3 @@
-/**
- * @ (#) SpringSessionScoped.java
- * Project     : SPAN Self Lending Service
- * File        : SpringSessionScoped.java
- * Author      : Namdev Shenoy K
- * Company     : Span Systems
- * Date Created: 07/July/2014
- *
- * ========================================================================================================================
- *  No | Modified date |      Modfied by     |  Reason
- * ========================================================================================================================
- *        ---
- * ========================================================================================================================
- */
-
 package com.warehouse.common;
 
 import java.lang.annotation.ElementType;
