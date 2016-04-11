@@ -1,0 +1,32 @@
+/**
+ * @ (#) SpringSessionScoped.java
+ * Project     : SPAN Self Lending Service
+ * File        : SpringSessionScoped.java
+ * Author      : Namdev Shenoy K
+ * Company     : Span Systems
+ * Date Created: 07/July/2014
+ *
+ * ========================================================================================================================
+ *  No | Modified date |      Modfied by     |  Reason
+ * ========================================================================================================================
+ *        ---
+ * ========================================================================================================================
+ */
+
+package com.warehouse.common;
+
+import java.lang.annotation.ElementType;
+import java.lang.annotation.Retention;
+import java.lang.annotation.RetentionPolicy;
+import java.lang.annotation.Target;
+
+import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.context.annotation.Scope;
+
+@Qualifier
+@Scope("session")
+@Target({ElementType.TYPE, ElementType.METHOD})
+@Retention(RetentionPolicy.RUNTIME)
+public @interface SpringSessionScoped {
+
+}

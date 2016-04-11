@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core">
+<h:head>
+<!-- Bootstrap core CSS -->
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<link rel="stylesheet"
+	href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"/>
+<script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+<script
+	src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+<title>Home Screen</title>
+<link type="text/css" rel="stylesheet" href="dashboard.css"/>
+</h:head>
+<h:body>
+<nav class="navbar navbar-inverse navbar-fixed-top">
+		<div class="container-fluid">
+			<div class="navbar-header">
+				<h:button type="button" class="navbar-toggle collapsed"
+					data-toggle="collapse" data-target="#navbar" aria-expanded="false"
+					aria-controls="navbar">
+					<span class="sr-only">Toggle navigation</span> <span
+						class="icon-bar"></span> <span class="icon-bar"></span> <span
+						class="icon-bar"></span>
+				</h:button>
+				<a class="navbar-brand" href="#">Smart Receiving @ Warehouse</a>
+			</div>
+			<div id="navbar" class="navbar-collapse collapse">
+				<h:form class="navbar-form navbar-right">
+					<h:inputText type="text" class="form-control" placeholder="Search..."></h:inputText>
+					<h:commandButton class="btn btn-primary btn-md" type="submit">Search</h:commandButton>
+				</h:form>
+			</div>
+		</div>
+	</nav>
+
+         <div class="container-fluid">
+		<div class="row">
+			<div class="col-sm-3 col-md-2 sidebar">
+				<ul class="nav nav-sidebar">
+					<li ><a href="homeScreen.html">Home</a></li>
+					<li><a href="newPurchase.xhtml">Add New Purchase</a></li>
+					<li ><a href="purchaseOrders.xhtml">Purchase Orders </a></li>
+					<li><a href="purchaseHistory.xhtml">Purchase History</a></li>
+					<li class="active"><a href="supplier.xhtml">Create Supplier <span class="sr-only">(current)</span></a></li>
+					<li><a href="PendingOrdersScreen.xhtml">Pending Orders</a></li>
+					<li><a href="statisticalReport.xhtml">Statistical Report</a></li>
+				</ul>
+					</div>
+			<div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
+				<h1 class="page-header">Create Supplier</h1>
+                 <h:form>
+                 <table class="table">
+<tr>
+<td><label for="ex1">Supplier Id</label>
+  <h:inputText class="form-control" id="ex1" type="text" value="#{supplierController.supplierId}" required="true"></h:inputText></td> 
+  <td></td>
+    <td><label for="ex1">Supplier Name</label>
+  <h:inputText class="form-control" id="ex1" type="text" value="#{supplierController.supplierName}" required="true"></h:inputText></td> 
+</tr>
+<tr>
+<td><label for="ex1">Address</label>
+  <h:inputText class="form-control" id="ex1" type="text" value="#{supplierController.address}" required="true"></h:inputText></td>
+  <td></td>
+<td><label for="ex1">PinCode</label>
+  <h:inputText class="form-control" id="ex1" type="text" value="#{supplierController.pincode}" required="true"></h:inputText></td>
+</tr>
+<tr>
+<td><label for="ex1">City</label>
+  <h:inputText class="form-control" id="ex1" type="text" value="#{supplierController.city}" required="true"></h:inputText></td>
+  <td></td>
+<td><label for="ex1">Country</label>
+  <h:inputText class="form-control" id="ex1" type="text" value="#{supplierController.country}" required="true"></h:inputText></td>
+</tr>
+<tr>
+<td><label for="ex1">Email</label>
+  <h:inputText class="form-control" id="ex1" type="text" value="#{supplierController.email}" ></h:inputText></td>
+  <td></td>
+<td><label for="ex1">Phone</label>
+  <h:inputText class="form-control" id="ex1" type="text" value="#{supplierController.phone}" ></h:inputText></td>
+</tr>
+<tr>
+<td><label for="ex1">Company Name</label>
+  <h:inputText class="form-control" id="ex1" type="text" value="#{supplierController.companyName}" required="true"></h:inputText></td>
+</tr>
+</table>
+<h:commandButton type="submit" action="#{supplierController.createSupplier}" class="btn btn-primary pull-right">Create</h:commandButton>
+<h:commandButton type="button" class="btn btn-primary pull-right">Cancel</h:commandButton>
+</h:form>
+				<div class="row placeholders"></div>
+			</div>
+		</div>
+		<div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">				
+                  <div class="container">           
+  <table class="table table-bordered" border="1">
+    <thead>
+      <tr>
+        <th>Supplier Id</th>
+        <th>Supplier Name</th>
+        <th>Company Name</th>
+        <th>City</th>
+        <th><h:commandButton type="button" class="btn btn-primary">Edit</h:commandButton></th>
+      </tr>
+    </thead>
+  </table>
+</div>
+</div>
+</div>
+</h:body>
+</html>

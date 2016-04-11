@@ -1,0 +1,108 @@
+body {
+	padding-top: 40px;
+	padding-bottom: 40px;
+	background-color: #eee;
+}
+
+/*.form-border {
+	border: thin;
+	border-color: silver;
+	padding: 3em;
+	border-style: solid;
+}*/
+
+.font-type {
+	font-weight: normal;
+}
+
+.link-type {
+	float: right;
+	text-align: right;
+}
+
+.auth-form-body {
+	border: thin;
+	padding: 3em;
+	font-weight:normal;
+	background-color: #fff;
+	border-style: solid;
+	border-color: silver;
+	border-spacing: 10cm;
+	width:10cm;
+	height: 8cm;
+	align:center;
+}
+
+.heading-type {
+	text-align: center;
+	padding: 10px 0;
+}
+.a{
+	text-align: center;
+}
+.form-signin {
+	max-width: 413px;
+	padding: 15px;
+	margin: 0 auto;
+}
+
+.form-signin .form-signin-heading, .form-signin .checkbox {
+	margin-bottom: 10px;
+}
+
+.form-signin .checkbox {
+	font-weight: normal;
+}
+
+.form-signin .form-control {
+	position: relative;
+	height: 1cm;
+	width:8cm;
+	display:block;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	padding: 10px;
+	font-size: 16px;
+}
+
+.form-signin .form-control:focus {
+	z-index: 2;
+}
+
+.form-signin input[type="password"] {
+	margin-bottom: 10px;
+	border-top-left-radius: 0;
+	border-top-right-radius: 0;
+}
+.create-account{
+	padding: 15px 20px;
+    text-align: center;
+    border: 1px solid #d8dee2;
+    border-radius: 5px;
+    position: relative;
+    display: block;
+    max-width: 400px;
+    font-weight: normal;
+    	background-color: #fff;
+    	width:10cm;
+    
+}
+.form-footer{line-height:40px; padding:1em; text-align:right; font-size:14px;border-color: silver;border-style: solid;}
+.form-footer a{padding:6px; background:#008000; margin-left:4px; color:#FFFFFF; text-decoration:none}
+.login-form{width:10cm; background:#FFF; margin:0 auto;  background-color:#FFF;height:2cm;}
+.color{
+	background-color: #ffdd99;
+}
+.auth-signup-body{
+	border: thin;
+	padding: 3em;
+	font-weight:normal;
+	background-color: #fff;
+	border-style: solid;
+	border-color: silver;
+	border-spacing: 10cm;
+	width:10cm;
+	height: 19cm;
+	align:center;
+}

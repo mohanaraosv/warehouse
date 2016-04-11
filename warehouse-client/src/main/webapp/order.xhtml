@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core">
+<h:head>
+<meta charset="ISO-8859-1"/>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"/>
+  <link type="text/css" rel="stylesheet" href="dashboard.css"/>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+<title>Item Details</title>
+</h:head>
+<h:body>
+  	<nav class="navbar navbar-inverse navbar-fixed-top">
+		<div class="container-fluid">
+			<div class="navbar-header">
+				<h:commandButton type="button" class="navbar-toggle collapsed"
+					data-toggle="collapse" data-target="#navbar" aria-expanded="false"
+					aria-controls="navbar">
+					<span class="sr-only">Toggle navigation</span> <span
+						class="icon-bar"></span> <span class="icon-bar"></span> <span
+						class="icon-bar"></span>
+				</h:commandButton>
+				<a class="navbar-brand" href="#">Smart Receiving @ Warehouse</a>
+			</div>
+			<div id="navbar" class="navbar-collapse collapse">
+				<form class="navbar-form navbar-right">
+					<h:inputText type="text" class="form-control" placeholder="Search..."/>
+					<h:commandButton class="btn btn-primary btn-md" type="submit">Search</h:commandButton>
+				</form>
+			</div>
+		</div>
+	</nav>
+
+	<div class="container-fluid">
+		<div class="row">
+			<div class="col-sm-3 col-md-2 sidebar">
+				<ul class="nav nav-sidebar">
+					<li><a href="http://localhost:8080/Warehouse/homeScreen.html#">Home</a></li>
+					<li class="active"><a href="http://localhost:8080/Warehouse/newPurchase.html">Add New Purchase<span class="sr-only">(current)</span></a></li>
+					<li><a href="purhaseOrders.xhtml">Purchase Orders</a></li>
+					<li><a href="purchaseHistory.xhtml">Purchase History</a></li>
+					<li><a href="createSupplier.xhtml">Create Supplier</a></li>
+					<li><a href="pendingOrder.xhtml">Pending Orders</a></li>
+					<li><a href="statisticalReport.xhtml">Statistical Report</a></li>
+
+				</ul>
+
+			</div>
+			<div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
+	<h:form>
+		<div class="col-xs-6">
+			<label>Item</label> <h:selectOneMenu value="#{orderController.productName}" class="form-control" required="true">
+			   <f:selectItem itemValue="1" itemLabel="Shoe" />
+			</h:selectOneMenu>
+
+			<label>Barcode Number</label><h:inputText type="text" value="#{orderController.barcode}" class="form-control"/>
+
+			<label>Item Description</label><h:inputTextarea rows="4" value="#{orderController.description}"
+			class="form-control" required="true"></h:inputTextarea>
+
+			<label>Quantity</label><h:inputText type="text" value="#{orderController.quantity}" class="form-control" required="true"/>
+
+			<label>Weight</label><h:inputText type="text" value="#{orderController.weight}" class="form-control" required="true"/>
+
+			<label>Amount</label><h:inputText type="text" value="#{orderController.amount}" class="form-control" required="true"/><br/>
+			
+			<h:commandButton type="submit" value="Submit" action="#{orderController.itemDetails}" class="btn btn-primary btn-md pull-right"></h:commandButton>
+		</div>
+	</h:form>
+	<div class="row placeholders"></div>
+			</div>
+		</div>
+	</div>
+</h:body>
+</html>

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core">
+<h:head>
+<meta charset="ISO-8859-1"/>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"/>
+  <link type="text/css" rel="stylesheet" href="dashboard.css"/>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+<title>Item Details</title>
+</h:head>
+<h:body>
+	<h:form>
+		<div class="col-xs-6">
+			<label>Item</label> <h:selectOneMenu value="#{orderController.productName}" class="form-control" required="true">
+			   <f:selectItem itemValue="1" itemLabel="Shoe" />
+			</h:selectOneMenu>
+
+			<label>Item Number</label><h:inputText type="text" class="form-control"/>
+
+			<label>Item Description</label><h:inputTextarea rows="4" value="#{orderController.description}"
+			class="form-control" required="true"></h:inputTextarea>
+		
+			<label>Length</label><h:inputText type="text" class="form-control" />
+		
+			<label>Breadth</label><h:inputText type="text" class="form-control" />
+
+			<label>Quantity</label><h:inputText type="text" value="#{orderController.quantity}" class="form-control" required="true"/>
+
+			<label>Weight</label><h:inputText type="text" value="#{orderController.weight}" class="form-control" required="true"/>
+
+			<label>Amount</label><h:inputText type="text" value="#{orderController.amount}" class="form-control" required="true"/><br/>
+			
+			<h:commandButton type="submit" class="btn btn-primary btn-md pull-right">Submit</h:commandButton>
+		</div>
+	</h:form>
+</h:body>
+</html>
