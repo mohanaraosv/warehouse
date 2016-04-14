@@ -1,15 +1,12 @@
 
-package com.warehouse.controller;
+package com.warehouse.web.view;
 
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Controller;
+import java.io.Serializable;
 
-import com.warehouse.common.WarehouseClientException;
-import com.warehouse.model.Order;
-import com.warehouse.services.OrderService;
+public class OrderView implements Serializable {
 
-@Controller("orderController")
-public class OrderController {
+    private static final long serialVersionUID = 1L;
+
     private String productName;
 
     private String barcode;
@@ -21,9 +18,6 @@ public class OrderController {
     private double weight;
 
     private double amount;
-
-    @Autowired
-    private OrderService service;
 
     public String getProductName() {
         return productName;
@@ -71,16 +65,5 @@ public class OrderController {
 
     public void setAmount(double amount) {
         this.amount = amount;
-    }
-
-    public void itemDetails() throws WarehouseClientException {
-        System.out.println(this.getProductName() + this.getDescription() + this.getQuantity() + this.getWeight() + this.getAmount());
-        Order item = new Order();
-        item.setProductName(this.getProductName());
-        item.setDescription(this.getDescription());
-        item.setQuantity(this.getQuantity());
-        item.setWeight(this.getWeight());
-        item.setAmount(this.getAmount());
-        service.readOrderDetails(item);
     }
 }

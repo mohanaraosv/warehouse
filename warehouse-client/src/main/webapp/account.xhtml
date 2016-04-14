@@ -29,41 +29,41 @@
 			<div class="well auth-signup-body">
 			<label>First name</label>
 			 <h:inputText
-				value="#{accountController.firstName}"  id="inputFname" class="form-control"
+				value="#{accountController.accountView.firstName}"  id="inputFname" class="form-control"
 				placeholder="First Name" required="true" autofocus="autofocus"></h:inputText>
 			<label>Last Name</label>
 			 <h:inputText
-				value="#{accountController.lastName}" id="inputLname" class="form-control"
+				value="#{accountController.accountView.lastName}" id="inputLname" class="form-control"
 				placeholder="Last Name" required="true"></h:inputText>
 			<label>City</label>
 			 <h:inputText
-				value="#{accountController.city}" id="inputCity" class="form-control"
+				value="#{accountController.accountView.city}" id="inputCity" class="form-control"
 				placeholder="City" required="true"></h:inputText>
 			<label>Country</label>
 			 <h:inputText
-			    value="#{accountController.country}" id="inputCountry" class="form-control"
+			    value="#{accountController.accountView.country}" id="inputCountry" class="form-control"
 				placeholder="Country" required="true"></h:inputText>
 				<label>Contact Number</label>
 			 <h:inputText
-			     value="#{accountController.contactNumber}" id="inputContactNumber" class="form-control"
+			     value="#{accountController.accountView.contactNumber}" id="inputContactNumber" class="form-control"
 				placeholder="Contact Number" required="true"></h:inputText>
 				
 			<label>User Name</label> 
 			<h:inputText
-			    value="#{accountController.userName}" id="inputUser" class="form-control"
+			    value="#{accountController.accountView.userName}" id="inputUser" class="form-control"
 				placeholder="User Name" required="true"> </h:inputText>
 			<label>Password</label>
 			<h:inputSecret
-				value="#{accountController.password}" id="inputPassword" class="form-control"
+				value="#{accountController.accountView.password}" id="inputPassword" class="form-control"
 				placeholder="Password" required="true"></h:inputSecret>
 			<label>Re-enter Password</label>
 			<h:inputSecret
-				value="#{accountController.password}" id="inputPassword1" class="form-control"
+				value="#{accountController.accountView.password}" id="inputPassword1" class="form-control"
 				placeholder="Re-enter Password" required="true"></h:inputSecret>
 			<table align="right">
 			<tr>
 			<th align="right">
-			<h:commandButton action="#{accountController.createAccount}" class="btn btn-md btn-success" type="submit" value="Create New Account">
+			<h:commandButton action="#{accountController.createAccount()}" class="btn btn-md btn-success" type="submit" value="Create New Account">
 			</h:commandButton></th>
 			</tr>
 			</table>

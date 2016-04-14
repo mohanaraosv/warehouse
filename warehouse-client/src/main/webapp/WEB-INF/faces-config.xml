@@ -15,6 +15,17 @@
       		org.springframework.web.jsf.DelegatingVariableResolver
    		</variable-resolver>
 	</application>
+
+	<navigation-rule>
+	    <description>Account page navigation rules.</description>
+     <from-view-id>/account.xhtml</from-view-id>
+    	<navigation-case>
+        	<from-outcome>success</from-outcome>
+        	<to-view-id>/account.xhtml</to-view-id>
+    	</navigation-case>
+    	<navigation-case>
+        	<from-outcome>failure</from-outcome>
+        	<to-view-id>/account.xhtml</to-view-id>
+    	</navigation-case>
+	</navigation-rule>
 </faces-config>
-
-

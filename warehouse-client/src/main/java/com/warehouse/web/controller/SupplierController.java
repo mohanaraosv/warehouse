@@ -1,5 +1,5 @@
 
-package com.warehouse.controller;
+package com.warehouse.web.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;

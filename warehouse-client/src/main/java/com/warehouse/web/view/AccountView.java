@@ -1,24 +1,11 @@
 
-package com.warehouse.controller;
+package com.warehouse.web.view;
 
 import java.io.Serializable;
 
-import javax.faces.bean.ManagedBean;
-import javax.faces.bean.ViewScoped;
+public class AccountView implements Serializable {
 
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Controller;
-
-import com.warehouse.common.WarehouseClientException;
-import com.warehouse.model.Account;
-import com.warehouse.services.AccountService;
-
-@Controller("accountController")
-@ManagedBean
-@ViewScoped
-public class AccountController implements Serializable {
-    
-    private static final long serialVersionUID = -2485334705570450432L;
+    private static final long serialVersionUID = 1L;
 
     private String userName;
 
@@ -35,13 +22,6 @@ public class AccountController implements Serializable {
     private String city;
 
     private String country;
-
-    private final AccountService accountService;
-    
-    @Autowired
-    public AccountController(final AccountService accountService){
-        this.accountService = accountService;
-    }
 
     public String getUserName() {
         return userName;
@@ -106,20 +86,4 @@ public class AccountController implements Serializable {
     public void setCountry(String country) {
         this.country = country;
     }
-
-    public void createAccount() throws WarehouseClientException {
-        System.out.println(this.getUserName() + this.getPassword() + this.getFirstName() + this.getLastName() + this.getEmail() + this.getContactNumber() + this.getCity()
-                + this.getCountry());
-        Account newModel = new Account();
-        newModel.setUserName(this.getUserName());
-        newModel.setPassword(this.getPassword());
-        newModel.setFirstName(this.getFirstName());
-        newModel.setLastName(this.getLastName());
-        newModel.setEmail(this.getEmail());
-        newModel.setContactNumber(this.getContactNumber());
-        newModel.setCity(this.getCity());
-        newModel.setCountry(this.getCountry());
-        accountService.createAccount(newModel);
-    }
-
 }

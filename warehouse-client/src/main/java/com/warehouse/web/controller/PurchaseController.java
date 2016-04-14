@@ -1,5 +1,5 @@
 
-package com.warehouse.controller;
+package com.warehouse.web.controller;
 
 import java.util.Date;
 
